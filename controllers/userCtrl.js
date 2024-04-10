@@ -37,7 +37,7 @@ const loginController = async (req, res) => {
     res.status(200).send({ message: `login successful`, success: true, token })
 
   } catch (error) {
-    console.log(error),
+   
       res.status(500).send({ message: `Login controller ${error.message}`, success: false })
   }
 };
@@ -60,7 +60,7 @@ const authController = async (req, res) => {
       });
     }
   } catch (error) {
-    console.log(error);
+  
     res.status(500).send({
       message: "auth error",
       success: false,
@@ -93,7 +93,7 @@ const applyDoctorController = async (req, res) => {
     })
 
   } catch (error) {
-    console.log(error)
+   
     res.status(5000).send({
       success: false,
       error,
@@ -119,7 +119,7 @@ const getAllNotificationController = async (req, res) => {
     })
 
   } catch (error) {
-    console.log(error),
+   
       res.status(500).send({
         message: 'error in notification',
         success: false,
@@ -140,7 +140,7 @@ const deleteAllNotificationController = async (req, res) => {
       data: updateUser
     })
   } catch (error) {
-    console.log(error),
+
       res.status(500).send({
         message: 'error in notification',
         success: false,
@@ -158,7 +158,7 @@ const getAllDoctorController = async (req, res) => {
       data: doctors
     })
   } catch (error) {
-    console.log(error)
+   
     res.status(500).send({
       success: false,
       message: "error in getting doc detail",
@@ -223,7 +223,7 @@ const bookingAvailabiltyController = async (req, res) => {
       })
     }
   } catch (error) {
-    console.log(error)
+   
     res.status(500).send({
       success: false,
       message: "error in booking detail",
@@ -241,7 +241,7 @@ try {
 data:appointments
   })
 } catch (error) {
-  console.log(error)
+ 
     res.status(500).send({
       success: false,
       message: "error in user appointment detail",
