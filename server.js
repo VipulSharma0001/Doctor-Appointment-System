@@ -25,7 +25,7 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 app.use("/api/v1/doctor", require("./routes/doctorRoutes"));
 
 //static file
-app.get(rxpress.static(path.join(__dirname,'./client/build')))
+app.get(express.static(path.join(__dirname,'./client/build')))
 
 app.get('*',function(req,res){
     res.sendFile(path.join(__dirname,"./client/build/index.html"));
