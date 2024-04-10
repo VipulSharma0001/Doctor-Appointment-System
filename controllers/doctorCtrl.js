@@ -11,7 +11,7 @@ const getDoctorInfoController =async(req,res)=>{
             data: doctor
         })
     } catch (error) {
-        console.log(error),
+    
         res.status(500).send({
             success:false,
             error,
@@ -29,7 +29,7 @@ const updateProfileController = async (req, res) => {
             data: doctor
         });
     } catch (error) {
-        console.log(error);
+       
         res.status(500).send({ 
             success: false,
             message: "Doctor profile update fail",
@@ -47,7 +47,7 @@ try {
             data: doctor
         });
 } catch (error) {
-    console.log(error);
+   
         res.status(500).send({ 
             success: false,
             message: "error single doctor update fail",
@@ -65,7 +65,7 @@ try {
         data:appointments,
     })
 } catch (error) {
-    console.log(error);
+   
     res.status(500).send({ 
         success: false,
         message: "error single doctor update fail",
@@ -90,7 +90,7 @@ const updateStausController=async(req,res)=>{
             message:'Appointment updated'
           })
     } catch (error) {
-        console.log(error);
+       
         res.status(500).send({ 
             success: false,
             message: "error single doctor update fail",
