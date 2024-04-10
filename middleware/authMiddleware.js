@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
       }
     });
   } catch (error) {
-    console.log(error);
+   
     res.status(401).send({
       message: "Auth Failed",
       success: false,
